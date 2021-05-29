@@ -4,7 +4,7 @@ Welcome Julia Con participants. My name is Colin Beckingham.
 I use Julia for machine learning and other purposes on standalone computers running openSUSE Linux.
 
 I'm presenting here three utilities useful in machine learning on a single machine.
-ML projects tend to be heavy users of resources and take a long time to run.
+Machine learning projects tend to be heavy users of resources and can take a long time to run.
 The more effectively we can generate results the more quickly we can make changes and implement a turnaround.
 
 Two important limitations on a local machine are:
