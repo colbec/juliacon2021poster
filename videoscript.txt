@@ -36,6 +36,6 @@ All of these are currently called by the Julia run() command.
 In a machine learning context we might use Julia's Flux package.
 The idea is to build the functions into our pipeline in strategic locations,
   for example in the callback to the train!() function,
-  to give audio warnings or implement delays to allow the CPU to cool before proceeding.
+  to give audio warnings or implement wait delays to allow the CPU to cool before proceeding.
 
 Thank you for taking the time to review this idea.
