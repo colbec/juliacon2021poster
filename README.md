@@ -2,7 +2,7 @@
 
 Detail on proposed virtual poster presentation for JuliaCon 2021
 
-Three mini-utilities related to machine learning projects:
+Three mini-utilities related to machine learning projects; the goal is to have a standalone computer manage itself as much as possible to allow full use of resources and only call on an operator when attention is needed:
 
 `callout()`: uses [flite](https://github.com/festvox/flite) to announce a message through loudspeakers when a significant point occurs in the learning process
 
