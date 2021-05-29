@@ -1,15 +1,39 @@
 (Notes: needs to run in 3 minutes or less...)
 
-Welcome Julia Con participants. My name is Colin Beckingham. I use Julia for machine learning and other purposes on standalone computers running openSUSE Linux.
+Welcome Julia Con participants. My name is Colin Beckingham.
+I use Julia for machine learning and other purposes on standalone computers running openSUSE Linux.
 
-I'm presenting here three utilities useful in machine learning on a single machine. ML projects tend to be heavy users of resources and take a long time to run. The more effectively we can generate results the more quickly we can make changes and implement a turnaround.
+I'm presenting here three utilities useful in machine learning on a single machine.
+ML projects tend to be heavy users of resources and take a long time to run.
+The more effectively we can generate results the more quickly we can make changes and implement a turnaround.
 
-Two important limitations on a local machine are: the load on the cores of the CPU, and the load on physical memory. The CPU can get hot when used heavily. Even worse, when memory fills completely this triggers the swap space. This can prevent a machine from crashing fatally but effectively renders the machine inoperable from the keyboard or remotely for a considerable time. Julia can be very greedy; it calls for brakes as well as accelerator.
+Two important limitations on a local machine are:
+  the load on the cores of the CPU, 
+  and the load on physical memory.
+The CPU can get hot when used heavily. Even worse, when memory fills completely this triggers the swap space.
+This can prevent a machine from crashing fatally
+  but effectively renders the machine inoperable from the keyboard or remotely for a considerable time.
+Julia can be very greedy; it calls for brakes as well as accelerator.
 
-Machine learning runs can take a long time - even with a GPU a heavy learning process, such as those with large images, can take many hours or even days. It is useful to know when a process finishes, and especially when an abnormal event happens that stops the run. So we make use of the loudspeakers in the box to call the attention of the operator to resolve the issue with the shortest delay possible.
+Machine learning runs can take a long time - 
+  even with a GPU a heavy learning process, such as those with large images, can take many hours or even days.
+It is useful to know when a process finishes, and especially when an abnormal event happens that stops the run.
+So we make use of the loudspeakers in the box to call the attention of the operator
+  to resolve the issue with the shortest delay possible.
 
-This project proposes three simple utilities to manage these issues. First, a check on the CPU temperature, second memory usage and available "headroom", and third an audio call out when a problem arises or the run reaches a predetermined state. All three use existing operating system routines: sensors, free, and flite. Sensors gives details on CPU temperature, free reports the state of memory usage, and flite sings out an audio message at appropriate moments. All of these are currently called by the Julia run() command.
+This project proposes three simple utilities to manage these issues.
+  First, a check on the CPU temperature,
+  second memory usage and available "headroom",
+  and third an audio call out when a problem arises or the run reaches a predetermined state.
+All three use existing operating system routines: sensors, free, and flite.
+  Sensors gives details on CPU temperature,
+  free reports the state of memory usage,
+  and flite sings out an audio message at appropriate moments.
+All of these are currently called by the Julia run() command.
 
-In a machine learning context we might use Julia's Flux package. The idea is to build the functions into our pipeline in strategic locations, for example in the callback to the train!() function, to give warnings or implement delays to allow the CPU to cool before proceeding.
+In a machine learning context we might use Julia's Flux package.
+The idea is to build the functions into our pipeline in strategic locations,
+  for example in the callback to the train!() function,
+  to give warnings or implement delays to allow the CPU to cool before proceeding.
 
 Thank you for taking the time to review this idea.
