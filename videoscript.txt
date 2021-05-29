@@ -5,12 +5,14 @@ I use Julia for machine learning and other purposes on standalone computers runn
 
 I'm presenting here three utilities useful in machine learning on a single machine.
 Machine learning projects tend to be heavy users of resources and can take a long time to run.
-The more effectively we can generate results the more quickly we can make changes and implement a turnaround.
+The more effectively we can generate results
+  the more quickly we can change hyperparameters and implement a turnaround.
 
 Two important limitations on a local machine are:
   the load on the cores of the CPU, 
   and the load on physical memory.
-The CPU can get hot when used heavily. Even worse, when memory fills completely this triggers the swap space.
+The CPU can get hot when used heavily. Just as inconvenient,
+  when memory fills completely this triggers the swap space.
 This can prevent a machine from crashing fatally
   but effectively renders the machine inoperable from the keyboard or remotely for a considerable time.
 Julia can be very greedy; it calls for brakes as well as accelerator.
@@ -34,6 +36,6 @@ All of these are currently called by the Julia run() command.
 In a machine learning context we might use Julia's Flux package.
 The idea is to build the functions into our pipeline in strategic locations,
   for example in the callback to the train!() function,
-  to give warnings or implement delays to allow the CPU to cool before proceeding.
+  to give audio warnings or implement delays to allow the CPU to cool before proceeding.
 
 Thank you for taking the time to review this idea.
