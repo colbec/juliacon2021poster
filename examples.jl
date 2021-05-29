@@ -1,11 +1,13 @@
 using Flux
 # set up data
+# incomplete example pipeline with arbitrary cutoff points
 ...
 X = imgs
 Y = onehotbatch(labels, 0:4)
 ...
 if checkmem() < 0.2
 	@error("Memory free is less than 20%")
+	callout("Stopping. Memory problem")
 	#break
 end
 ...
@@ -28,8 +30,8 @@ begin
   # in this example temperature of 70 C is the cutoff
 	while cput > 70
 		@warn("watching CPU... ($cput)")
-    callout("CPU is hot")
-    # rest the CPU for 60 seconds
+    		callout("CPU is hot")
+    		# rest the CPU for 60 seconds
 		sleep(60)
 		cput = checkcpu()
 	end
