@@ -26,4 +26,4 @@ Right, but then I would not have access to control of the machine learning to sl
 
 **Hot CPUs are usually a result of accumulated dirt in boxes and fans and impeded air flow.**
 
-Right, continuous monitoring of internal temperatures gives an incentive to make sure that boxen are clean. It is reported that re-seating processors with fresh thermal paste can also help. In wintertime here I can just open a window to let in cold air and that also helps a lot. Situating the learning box in a cold room in the house means I don't have to wear a tuque while the programme runs.
+Right, continuous monitoring of internal temperatures gives an incentive to make sure that boxen are clean. It is reported that re-seating processors with fresh thermal paste can also help. In wintertime here I can just open a window to let in cold air and that also helps a lot. Situating the learning box in a cold room in the house means I don't have to wear a tuque and overcoat while the programme runs.
