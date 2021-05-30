@@ -14,7 +14,7 @@ True, you might be in the kitchen making coffee and miss a notification. For imp
 
 **Temperature control on the CPU is managed by the chip internally with auto shut down. Why bother to control it yourself?**
 
-To maintain the flow of the pipeline, preserve the state of variables and to increase the longevity of the chip. 
+To maintain the flow of the pipeline, preserve the state of variables and to increase the longevity of the chip. It's my understanding that the internal protection is there to prevent complete failure, not to ensure longevity.
 
 **Why don't you have a pure Julia version of these utilties?**
 
@@ -24,6 +24,10 @@ Right now the results come back quite fast, so there is no incentive to convert 
 
 Right, but then I would not have access to control of the machine learning to slow down the processing or introduce a wait state and let the machine cool down.
 
-**Hot CPUs are usually a result of accumulated dirt in boxes and fans and impeded air flow.**
+**Hot CPUs are usually a result of accumulated dirt in boxes and fans and impeded air flow due to poor wire management and inefficient fans.**
 
 Right, continuous monitoring of internal temperatures gives an incentive to make sure that boxen are clean. It is reported that re-seating processors with fresh thermal paste can also help. In wintertime here I can just open a window to let in cold air and that also helps a lot. Situating the learning box in a cold room in the house means I don't have to wear a tuque and overcoat while the programme runs.
+
+**Why is memory monitoring even a concern? I never had any problem.**
+
+It can be very instructive to use a memory monitoring package to watch where the demand for memory occurs. In my experience data matrix manipulation to prepare the data for learning is not an issue, perhaps due to intelligent tiling of matrices, but when tuning batches and batch sizes memory consumption ramps up very quickly. The goal is to let it do that, to use memory fully, but not allow it to spill over into the swap space. The more hidden layers we add into our learning pipelines the more critical this becomes.
