@@ -19,3 +19,11 @@ To maintain the flow of the pipeline, preserve the state of variables and to inc
 **Why don't you have a pure Julia version of these utilties?**
 
 Right now the results come back quite fast, so there is no incentive to convert to pure Julia versions. I would have to spend time becoming familiar with the low level access to information; time is valuable and has to take its turn in the priorities of life.
+
+**There are lots of temperature monitoring packages available specifically for CPUs. You could just run one of those separately from the machine learning pipeline that would then run faster.**
+
+Right, but then I would not have access to control of the machine learning to slow down the processing or introduce a wait state and let the machine cool down.
+
+**Hot CPUs are usually a result of accumulated dirt in boxes and fans and impeded air flow.**
+
+Right, continuous monitoring of internal temperatures gives an incentive to make sure that boxen are clean. It is reported that re-seating processors with fresh thermal paste can also help.
