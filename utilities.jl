@@ -5,7 +5,8 @@
 	produces a sound representation of the message through speakers
 """
 function callout(mess::String)
-	# comment
+	# padsp is necessary for me to play through pulseaudio
+	# ignorestatus is useful since often flite performs the audio but does not exit cleanly with 0
 	cmd = ignorestatus(`padsp flite "$mess"`)
 	run(cmd);
 end
@@ -30,6 +31,7 @@ end
 function checkcpu()
 	# function to check state of cpu temperature
 	cmd = `sensors`
+	# alternatively get the json output from sensors
 	sens = readlines(cmd)
 	cs = sens[contains.(sens,"Core")]
 	ts = Vector{Real}()
@@ -39,5 +41,6 @@ function checkcpu()
 		t = cs[i][f[1]]
 		push!(ts,parse(Float32,t))
 	end
+	# return the average of the core temperatures
 	return sum(ts)/4
 end
