@@ -31,3 +31,7 @@ Right, continuous monitoring of internal temperatures gives an incentive to make
 **Why is memory monitoring even a concern? I never had any problem.**
 
 It can be very instructive to use a memory monitoring package to watch where the demand for memory occurs. In my experience data matrix manipulation to prepare the data for learning is not an issue, perhaps due to intelligent tiling of matrices, but when tuning batches and batch sizes memory consumption ramps up very quickly. The goal is to let it do that, to use memory fully, but not allow it to spill over into the swap space. The more hidden layers we add into our learning pipelines the more critical this becomes.
+
+**How do you arrive at your thresholds? Why 20% free memory, why a percentage and not an absolute number of GB, and why 70C for CPU temperature?**
+
+Memory cutoff will depend on the project and your physical memory available. Temperature is a personal choice.
