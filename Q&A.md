@@ -35,3 +35,7 @@ It can be very instructive to use a memory monitoring package to watch where the
 **How do you arrive at your thresholds? Why 20% free memory, why a percentage and not an absolute number of GB, and why 70C for CPU temperature?**
 
 Memory cutoff will depend on the project and your physical memory available. Temperature is a personal choice.
+
+**I can't make out the colours on your video. What standards are you using for accessibility?**
+
+Colour contrast suggested by site http://web-accessibility.carnegiemuseums.org/design/color/
