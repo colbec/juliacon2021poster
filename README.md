@@ -16,6 +16,6 @@ When using [Flux](https://github.com/FluxML/Flux.jl) as the main learning packag
 
 `checkmem()` is particularly useful at the beginning of any run in REPL interactive mode since in back-to-back runs the memory may not be fully cleared. This can mean that one learning session will run without memory problems but a second identical run (with the same hyperparameters) has memory issues unless the REPL is shut down and restarted from scratch.
 
-First version of video can be found at https://youtu.be/rj9DgyFkn6Y
+Updated version of video can be found at https://youtu.be/Otwlcw5pPro
 
 Anticipated questions listed in Q&A file.
