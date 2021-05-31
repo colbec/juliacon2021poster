@@ -18,7 +18,7 @@ To maintain the flow of the pipeline, preserve the state of variables and to inc
 
 **Why don't you have a pure Julia version of these utilties?**
 
-Right now the results come back quite fast, so there is no incentive to convert to pure Julia versions. I would have to spend time becoming familiar with the low level access to information; time is valuable and has to take its turn in the priorities of life.
+Right now the results come back quite fast, so there is no incentive to convert to pure Julia versions. I would have to spend time becoming familiar with the low level access to information; time is valuable and things have to take their turn in the priorities of life.
 
 **There are lots of temperature monitoring packages available specifically for CPUs. You could just run one of those separately from the machine learning pipeline that would then run faster.**
 
