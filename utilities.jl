@@ -6,7 +6,7 @@
 """
 function callout(mess::String)
 	# padsp is necessary for me to play through pulseaudio
-	# ignorestatus is useful since often flite performs the audio but does not exit cleanly with 0
+	# ignorestatus is useful since flite may perform the audio but does not exit cleanly with 0
 	cmd = ignorestatus(`padsp flite "$mess"`)
 	run(cmd);
 end
@@ -18,9 +18,11 @@ end
 	returns decimal fraction in range 0.0:1.0
 """
 function checkmem()
+	# -b returns values in bytes
 	cmd = `free -b`
 	lins = readlines(cmd)
 	lina = split(lins[2]," ",keepempty=false)
+	# available divided by total
 	return parse(Int,lina[7])/parse(Int,lina[2])
 end
 """
