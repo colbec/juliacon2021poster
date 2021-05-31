@@ -30,17 +30,22 @@ end
 """
 function checkcpu()
 	# function to check state of cpu temperature
+	# assumes that Julia is using all cores equally
 	cmd = `sensors`
 	# alternatively get the json output from sensors
 	sens = readlines(cmd)
+	# examine only those lines related to cores
 	cs = sens[contains.(sens,"Core")]
+	# create a vector to store the individual core temperatures
 	ts = Vector{Real}()
+	# reg expression to extract real values
 	R = r"\d+\.\d+"
-	for i in 1:length(cs)
+	ncores = length(cs)
+	for i in 1:ncores
 		f = findall(R,cs[i])
 		t = cs[i][f[1]]
 		push!(ts,parse(Float32,t))
 	end
 	# return the average of the core temperatures
-	return sum(ts)/4
+	return sum(ts)/ncores
 end
