@@ -20,6 +20,10 @@ To maintain the flow of the pipeline, preserve the state of variables and to inc
 
 Right now the results come back quite fast, so there is no incentive to convert to pure Julia versions. I would have to spend time becoming familiar with the low level access to information; time is valuable and things have to take their turn in the priorities of life.
 
+**I use Windows. How can I get the equivalent of `free` and `sensors` in my OS?**
+
+I have not used Windows in a long time, so I cannot give much of an answer here, except to point to various discussions online which assess the merits of Windows alternatives to Linux `free` and `sensors` such as [here](https://superuser.com/questions/315195/is-there-a-command-to-find-out-the-available-memory-in-windows) and [here](https://superuser.com/questions/395434/how-can-i-check-the-temperature-of-my-cpu-in-windows).
+
 **There are lots of temperature monitoring packages available specifically for CPUs. You could just run one of those separately from the machine learning pipeline that would then run faster.**
 
 Right, but then I would not have access to control of the machine learning to slow down the processing or introduce a wait state and let the machine cool down.
