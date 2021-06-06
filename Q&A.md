@@ -40,6 +40,10 @@ It can be very instructive to use a memory monitoring package to watch where the
 
 Memory cutoff will depend on the project and your physical memory available. Temperature is a personal choice.
 
+**Using such protection is all fine and well but lots of these checks can still slow the process of learning.**
+
+True - but as the learning pipeline is refined and the operator becomes more confident that the process will not require frequent checking many of the checks necessary early in the management process can be removed.
+
 **I can't make out the colours on your video. What standards are you using for accessibility?**
 
 Colour contrast suggested by site http://web-accessibility.carnegiemuseums.org/design/color/
