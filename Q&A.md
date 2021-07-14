@@ -1,8 +1,12 @@
 Anticipated questions in Q&A session:
 
+**Instead of shelling out to flite to make announcements, why not use a pure Julia application such as LibSndFile?**
+
+True, LibSndFile can output plain sounds, but I am thinking in terms of actual words enunciated, which flite is able to do. An alternative is to use Festival running as a server, but that is a larger application. Another advantage of flite is a choice of voices and even different languages. There are a number of different alternatives for output of voices, but flite happens to be open source and free of encumbrances.
+
 **Why don't you use an online service such as AWS? They have rentable faster equipment.**
 
-True. On the other hand, standalone computers are useful in the context of smaller datasets and establishing a good and reliable pipeline which can later be transferred to an online service to run at high speed. It helps to ensure that no runaway processes are uploaded. Early in the learning process we make fast progress even on a plain CPU which helps to refine our baseline initialization of weights which can later be transferred to the much faster online service.
+True. On the other hand, standalone computers are useful in the context of smaller datasets and experimenting with and establishing a good and reliable pipeline which can later be transferred to an online service to run at high speed. It helps to ensure that no runaway processes are uploaded. Early in the learning process we make fast progress even on a plain CPU which helps to refine our baseline initialization of weights which can later be transferred to the much faster online service.
 
 **Why don't you get a GPU?**
 
