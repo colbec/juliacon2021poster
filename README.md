@@ -1,6 +1,6 @@
 # juliacon2021poster
 
-Detail on proposed virtual poster presentation for JuliaCon 2021
+The video published by Julia Computing can be found [here](https://www.youtube.com/watch?v=hU_heYdZOrI).
 
 Three mini-utilities related perhaps directly to machine learning projects, but more generally to any project where lengthy, intensive computation happens, which is largely what Julia is about. The goal is to have a standalone computer manage itself as much as possible to allow full use of resources without interruption and only call on an operator when attention is needed:
 
